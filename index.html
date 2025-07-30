@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="icons/favicon.png" type="image/png">
+<link rel="icon" href="icons/favicon_nobg.png" type="image/png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="icons/favicon.png" type="image/png">
+<link rel="icon" href="icons/favicon_nobg.png" type="image/png">
 <meta name="description" content="Portfolio of Santoshi Borra – Bioinformatics Scientist with expertise in NGS, TWAS, ML, and computational biology.">
 <meta name="author" content="Santoshi Borra">
-<meta property="og:image" content="icons/favicon.png">
+<meta property="og:image" content="icons/favicon_nobg.png">
 <meta property="og:title" content="Santoshi Borra| Portfolio">
 <meta property="og:description" content="Solving biological problems with data-driven pipelines and AI.">
   <title>Santoshi Borra | Portfolio</title>
@@ -21,7 +21,7 @@
       margin: 0;
       padding: 0;
       font-family: 'Intel One Mono', sans-serif;
-      background: #f5f7fa;
+      background: #979ba2;
       color: #2C3E50;
       overflow-x: hidden;
       transition: background 0.3s ease, color 0.3s ease;
@@ -77,10 +77,12 @@ nav {
 }
 
 .nav-container {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  justify-content: center; /* centers .nav-links */
 }
+
 body.dark nav {
   background: rgba(30, 30, 30, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -196,6 +198,8 @@ nav a.active {
     align-items: center;
     gap: 0rem;
   }
+  
+
 
   .nav-links {
     display: flex;
@@ -238,6 +242,25 @@ nav a.active {
     min-height: 2rem;
   }
 }
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers nav-links container */
+    position: relative;
+  }
+
+.nav-logo {
+  position: absolute;
+  top: 36%;
+  left: -5rem;
+  transform: translateY(-50%);
+  width: 81px;
+  height: 81px;
+  object-fit: contain;
+  z-index: 1001;
+  opacity: 0.75
+}
+
 
 
 .btn-icon {
@@ -522,7 +545,7 @@ body:not(.dark) .skill-group li {
   box-shadow:
     0 0 0 1.5px rgba(93, 173, 226, 0.35),    /* brighter edge */
     0 10px 20px rgba(0, 0, 0, 0.4);          /* deeper drop */
-  background: rgba(35, 45, 60, 0.45);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .skill-group h3 {
@@ -708,7 +731,7 @@ body:not(.dark) .expertise-block .line {
 }
 
 .work-block {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   padding: 1.8rem;
@@ -1044,7 +1067,7 @@ body:not(.dark) .education-block strong {
 
 
 body.dark {
-  background: #0f0f11;
+  background: #01011a;
   color: #eaeaea;
 }
 
@@ -1056,7 +1079,7 @@ body.dark nav {
 body.dark .card,
 body.dark .project-block,
 body.dark .skill-group {
-  background: #1e1f23;
+  background: #354586;
   color: #f1f1f3;
   box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
@@ -1175,6 +1198,39 @@ body.dark .wetlab-text {
       padding: 0.6rem 1rem;
     }
   }
+  /* === APPLY GLASSY STYLE TO ALL KEY BLOCKS === */
+.skill-group,
+.education-block,
+.work-block,
+.project-block {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(93, 173, 226, 0.3);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* === DARK MODE GLASSY STYLE === */
+body.dark .skill-group,
+body.dark .education-block,
+body.dark .work-block,
+body.dark .project-block {
+  background: rgba(30, 30, 30, 0.7);
+  border: 1px solid rgba(93, 173, 226, 0.2);
+}
+.glassy {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(93, 173, 226, 0.3);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+
 
 </style>
 <!-- Google Analytics (GA4) -->
@@ -1204,26 +1260,29 @@ body.dark .wetlab-text {
 
 <body class="dark">
 <div id="tsparticles"></div>
-
 <nav>
+  <a href="#about">
+    <img src="icons/logo.png" alt="Logo" class="nav-logo" />
+  </a>
+
   <div class="nav-container">
     <div class="nav-links">
       <a href="#about">About Me</a>
       <div class="portfolio-dropdown">
-      <button id="portfolio-toggle" class="btn-icon">Portfolio ▾</button>
-      <div class="portfolio-menu" id="portfolio-menu">
-        <a href="#expertise">Areas of Expertise</a>
-        <a href="#work">Work Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
+        <button id="portfolio-toggle" class="btn-icon">Portfolio ▾</button>
+        <div class="portfolio-menu" id="portfolio-menu">
+          <a href="#expertise">Areas of Expertise</a>
+          <a href="#work">Work Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+        </div>
       </div>
-    </div>
       <a href="assets/god.pdf" target="_blank">Resume</a>
     </div>
-    
   </div>
 </nav>
+
 
 <section class="hero" id="about">
     <img src="icons/profile.png" alt="Santoshi Borra">
@@ -1490,7 +1549,7 @@ tsParticles.load("tsparticles", {
       density: { enable: true, area: 1200 },
       value: 35
     },
-    color: { value: "#3d464d" },
+    color: { value: "#AB8D46" },
     shape: { type: "square" },
     opacity: { value: 0.35 },
     size: { value: { min: 1, max: 8 } },
@@ -1504,7 +1563,7 @@ tsParticles.load("tsparticles", {
     },
     links: {
       enable: true,
-      color: "#3d464d",
+      color: "#5C5034",
       distance: 150,
       opacity: 0.45,
       width: 0.8
