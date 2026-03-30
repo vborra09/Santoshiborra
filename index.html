@@ -4,1096 +4,494 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="icons/logo.png" type="image/png">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="icons/logo.png" type="image/png">
-<meta name="description" content="Portfolio of Santoshi Borra – Bioinformatics Scientist with expertise in NGS, TWAS, ML, and computational biology.">
+<meta name="description" content="Portfolio of Santoshi Borra – Bioinformatician with expertise in spatial transcriptomics, single-cell analysis, metabolic modeling, and computational drug discovery.">
 <meta name="author" content="Santoshi Borra">
 <meta property="og:image" content="icons/favicon_nobg.png">
-<meta property="og:title" content="Santoshi Borra| Portfolio">
-<meta property="og:description" content="Solving biological problems with data-driven pipelines and AI.">
-  <title>Santoshi Borra | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@300;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
-  <style>
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Intel One Mono', sans-serif;
-      background: #979ba2;
-      color: #2C3E50;
-      overflow-x: hidden;
-      transition: background 0.3s ease, color 0.3s ease;
-    }
-    #tsparticles {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      top: 0;
-      left: 0;
-    }  
-#main, #about {
-  transition: opacity 0.8s ease, transform 0.8s ease;
-  will-change: opacity, transform;
-}
-
-#main.hidden, #about.hidden {
-  opacity: 0;
-  transform: translateY(40px);
-  pointer-events: none;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-}
-
-#main.visible, #about.visible {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-  position: relative;
-  z-index: 1;
-}
-
-nav {
-  position: fixed;
-  top: 1.2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 0.5rem 1.2rem; /* reduced padding */
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 6px; /* slightly smaller */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* slightly lighter shadow */
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  max-width: calc(100% - 2rem);
-  font-size: 0.9rem; /* reduce font size */
-}
-
-.nav-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* centers .nav-links */
-}
-
-body.dark nav {
-  background: rgba(30, 30, 30, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-}
-
-
-.nav-links a {
-  display: inline-block;
-  margin: 0 0.4rem;
-  padding: 0.45rem 1rem;
-  background: #393b3c; /* Deep navy blue capsule */
-  color: #ffffff; /* White text */
-  border-radius: 6px;
-  font-size: 0.85rem; /* slightly smaller font size */
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-  transition: all 0.3s ease;
-  border: 1.5px solid #19252d; /* Sky blue outline */
-}
-
-.nav-links a:hover {
-  background: #7b878f; /* Bright sky blue on hover */
-  color: #0f1e2e; /* Very dark text for contrast */
-  box-shadow: 0 6px 20px rgba(65, 75, 83, 0.6);
-  transform: scale(1.06);
-}
-
-nav a.active {
-  background: #5b7789;
-  color: #0f1e2e !important;
-  border: 2px solid #575551;
-}
-
-
-.nav a:hover { color: #baab24; }
-.hero {
-      min-height: 100vh;
-      padding: 2rem 2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background: transparent;
-    }
-
-.hero img {
-  border-radius: 20px;
-  width: 180px; /* Slightly reduced from 240px for better balance */
-  height: auto;
-  object-fit: cover;
-  margin-top: 0rem;
-  margin-bottom: 0.2rem; /* Adds just the right gap to the name */
-  background: none;
-  box-shadow: none;
-}
-.hero h1 {
-  font-size: 3.5rem;
-  margin-top: 0rem;        /* Add this */
-  margin-bottom: 0.2rem;   /* Slightly shrink this */
-  font-weight: 700;
-  color: hsl(203, 14%, 23%);
-}
-@media (max-width: 600px) {
-  .hero img {
-    width: 140px;
+<meta property="og:title" content="Santoshi Borra | Portfolio">
+<meta property="og:description" content="From raw sequencing data to clinical and experimental insight.">
+<title>Santoshi Borra | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@300;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; padding: 0;
+    font-family: 'Intel One Mono', sans-serif;
+    background: #979ba2;
+    color: #2C3E50;
+    overflow-x: hidden;
+    transition: background 0.3s ease, color 0.3s ease;
   }
-}
-
-nav a.active {
-      color: #4a5862;
-      border-bottom: 2px solid #587e98;
-    }
-    .hero h1 {
-      font-size: 3.5rem;
-      margin-bottom: 0rem;
-      font-weight: 700;
-      color: #49555c;
-    }
-    .hero p {
-      font-size: 1.3rem;
-      margin-bottom: 2rem;
-      max-width: 700px;
-    }
-    .hero .buttons {
-      display: flex;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-@media (max-width: 768px) {
+  #tsparticles {
+    position: fixed; width: 100%; height: 100%;
+    z-index: -1; top: 0; left: 0;
+  }
+  #main, #about {
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
+  }
+  #main.hidden, #about.hidden {
+    opacity: 0; transform: translateY(40px);
+    pointer-events: none; position: absolute;
+    width: 100%; z-index: -1;
+  }
+  #main.visible, #about.visible {
+    opacity: 1; transform: translateY(0);
+    pointer-events: auto; position: relative; z-index: 1;
+  }
   nav {
-    bottom: 1rem;
-    top: auto;
-    left: 50%;
+    position: fixed; top: 1.2rem; left: 50%;
     transform: translateX(-50%);
-    padding: 0.4rem 1rem;
-    border-radius: 1rem;
-    width: calc(100% - 2rem);
-    max-width: max-content;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap: 0.5rem;
+    padding: 0.5rem 1.2rem;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-radius: 6px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    z-index: 1000; display: flex;
+    justify-content: space-between; align-items: center;
+    border: 1px solid rgba(255,255,255,0.15);
+    max-width: calc(100% - 2rem); font-size: 0.9rem;
   }
-
   .nav-container {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    gap: 0rem;
+    position: relative; display: flex;
+    align-items: center; justify-content: center;
   }
-  
-
-
-  .nav-links {
-    display: flex;
-    gap: 0.25rem;
-    flex-wrap: nowrap;
-    justify-content: center;
-    overflow-x: auto;
-    scrollbar-width: none; /* Hide scrollbar in Firefox */
+  body.dark nav {
+    background: rgba(30,30,30,0.7);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
   }
-
   .nav-links a {
-    padding: 0.35rem 0.75rem;
-    font-size: 0.7rem;
-    border-radius: 6px;
-    white-space: nowrap;
-    margin: 0.12;
+    display: inline-block; margin: 0 0.4rem;
+    padding: 0.45rem 1rem; background: #393b3c;
+    color: #ffffff; border-radius: 6px; font-size: 0.85rem;
+    font-weight: 600; text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    transition: all 0.3s ease; border: 1.5px solid #19252d;
   }
-    #theme-toggle {
-    margin-left: 0.5rem;
-    margin-right: 0;
-    padding: 0.35rem;
-    font-size: 0.9rem;
-    min-width: 2rem;
-    min-height: 2rem;
-    border-radius: 50%;
+  .nav-links a:hover {
+    background: #7b878f; color: #0f1e2e;
+    box-shadow: 0 6px 20px rgba(65,75,83,0.6); transform: scale(1.06);
   }
-  .theme-toggle-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 0.4rem;
+  nav a.active {
+    background: #5b7789; color: #0f1e2e !important;
+    border: 2px solid #575551;
   }
-
-  #theme-toggle {
-    margin: 0;
-    font-size: 1rem;
-    padding: 0.4rem;
-    border-radius: 50%;
-    min-width: 2rem;
-    min-height: 2rem;
+  .hero {
+    min-height: 100vh; padding: 2rem 2rem;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    text-align: center; background: transparent;
   }
-}
-.nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centers nav-links container */
-    position: relative;
+  .hero img {
+    border-radius: 20px; width: 180px; height: auto;
+    object-fit: cover; margin-top: 0; margin-bottom: 0.2rem;
+    background: none; box-shadow: none;
   }
-
-.nav-logo {
-  position: absolute;
-  top: 36%;
-  left: -5rem;
-  transform: translateY(-50%);
-  width: 81px;
-  height: 81px;
-  object-fit: contain;
-  z-index: 1001;
-  opacity: 0.55
-}
-
-
-
-.btn-icon {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.75rem;
-    border-radius: 6px;
-    background: rgba(93, 173, 226, 0.1);
-    color: #ffffff;
-    font-weight: 600;
-    text-decoration: none;
-    border: 0.5px solid rgba(93, 173, 226, 0.3);
+  .hero h1 {
+    font-size: 3.5rem; margin-top: 0; margin-bottom: 0.2rem;
+    font-weight: 700; color: hsl(203,14%,23%);
+  }
+  .hero p {
+    font-size: 1.3rem; margin-bottom: 2rem; max-width: 700px;
+  }
+  .contact-buttons {
+    display: flex; flex-direction: column;
+    align-items: center; gap: 1.2rem; margin-top: 1rem;
+  }
+  .button-row {
+    display: flex; flex-wrap: wrap;
+    justify-content: center; gap: 1rem;
+  }
+  .btn-icon {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.65rem 1.75rem; border-radius: 6px;
+    background: rgba(93,173,226,0.1); color: #ffffff;
+    font-weight: 600; text-decoration: none;
+    border: 0.5px solid rgba(93,173,226,0.3);
     backdrop-filter: blur(10px);
-    box-shadow: 0 4px 8px rgba(93, 173, 226, 0.25);
+    box-shadow: 0 4px 8px rgba(93,173,226,0.25);
     transition: 0.3s ease;
   }
-
- .btn-icon:hover {
-    background: rgba(93, 173, 226, 0.25);
-    box-shadow: 0 6px 16px rgba(93, 173, 226, 0.4);
+  .btn-icon:hover {
+    background: rgba(93,173,226,0.25);
+    box-shadow: 0 6px 16px rgba(93,173,226,0.4);
     transform: translateY(-2px);
   }
-.btn-icon img {
-  width: 20px;
-  height: 20px;
-  margin-right: 0.4rem;
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  border-radius: 0;
-  background: none;
-  box-shadow: none;
-  top: 1px;
-}
-.btn-icon {
-  padding: 0.65rem 1.75rem;
-}
-
-/* === DROPDOWN CONTAINER === */
-.portfolio-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* === TOGGLE BUTTON === */
-#portfolio-toggle {
-  background: #1A5276;
-  color: #ffffff;
-  font-size: 0.85rem;
-  font-weight: 600;
-  border-radius: 6px;
-  padding: 0.45rem 1rem;
-  border: 1.5px solid #47555e;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-#portfolio-toggle:hover {
-  background: #424e56;
-  color: #0f1e2e;
-  box-shadow: 0 6px 20px rgba(93, 173, 226, 0.6);
-  transform: scale(1.06);
-}
-
-/* === DROPDOWN MENU === */
-.portfolio-menu {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-  top: calc(100% + 10px);
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0.75);
-  border: 1px solid rgba(88, 98, 101, 0.4);
-  border-radius: 6px;
-  padding: 1rem 0.9rem;
-  box-shadow: 0 12px 28px rgba(0, 191, 255, 0.15);
-  backdrop-filter: blur(14px);
-  z-index: 1001;
-  width: 250px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-/* === VISIBLE MENU === */
-.portfolio-menu.show {
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
-  animation: fadeIn 0.3s ease;
-}
-
-/* === DROPDOWN LINKS === */
-.portfolio-menu a {
-  background: rgba(255, 255, 255, 0.4);
-  color: #26333c;
-  font-weight: 500;
-  padding: 0.65rem 1.2rem;
-  border-radius: 40px;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  border: 1px solid transparent;
-}
-
-.portfolio-menu a:hover {
-  background: #2d434b;
-  color: #ffffff;
-  font-weight: 600;
-  box-shadow: 0 0 10px #223034, inset 0 0 5px rgba(255, 255, 255, 0.6);
-  border: 1px solid #48656e;
-}
-
-/* === DARK MODE === */
-body.dark .portfolio-menu {
-  background: rgba(20, 20, 30, 0.92);
-  border-color: #2e4952;
-}
-
-body.dark .portfolio-menu a {
-  background: rgba(135, 64, 64, 0.07);
-  color: #d8ecff;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.6);
-}
-
-body.dark .portfolio-menu a:hover {
-  background: #4f830f;
-  color: #0f1e2e;
-  box-shadow: 0 0 10px #3d5158, inset 0 0 5px rgba(0, 0, 0, 0.4);
-  border: 1px solid #0e333f;
-}
-
-/* === ANIMATION === */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-8px) translateX(-50%); }
-  to { opacity: 1; transform: translateY(0) translateX(-50%); }
-}
-
-/* === MOBILE UPWARDS OVERRIDE === */
-@media (max-width: 768px) {
-  .portfolio-dropdown {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: relative;
+  .btn-icon img {
+    width: 20px; height: 20px; margin-right: 0.4rem;
+    display: inline-block; vertical-align: middle;
+    border-radius: 0; background: none; box-shadow: none; top: 1px;
   }
 
+  /* DROPDOWN */
+  .portfolio-dropdown { position: relative; display: inline-block; }
   #portfolio-toggle {
-    width: 100%;
-    max-width: 220px;
+    background: #1A5276; color: #ffffff; font-size: 0.85rem;
+    font-weight: 600; border-radius: 6px; padding: 0.45rem 1rem;
+    border: 1.5px solid #47555e;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    cursor: pointer; transition: all 0.3s ease;
   }
-
+  #portfolio-toggle:hover {
+    background: #424e56; color: #0f1e2e;
+    box-shadow: 0 6px 20px rgba(93,173,226,0.6); transform: scale(1.06);
+  }
   .portfolio-menu {
-    top: auto;
-    bottom: calc(100% + 12px);
+    visibility: hidden; opacity: 0; pointer-events: none;
+    position: absolute; top: calc(100% + 10px); left: 50%;
     transform: translateX(-50%);
-    width: 90vw;
-    max-width: 300px;
-    font-size: 0.9rem;
-    background: rgba(20, 20, 30, 0.95);
-    box-shadow: 0 -12px 24px rgba(0, 0, 0, 0.35);
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(88,98,101,0.4);
+    border-radius: 6px; padding: 1rem 0.9rem;
+    box-shadow: 0 12px 28px rgba(0,191,255,0.15);
+    backdrop-filter: blur(14px); z-index: 1001;
+    width: 250px; display: flex;
+    flex-direction: column; gap: 0.65rem;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
   }
-
   .portfolio-menu.show {
-    animation: menuSlideUp 0.25s ease;
+    visibility: visible; opacity: 1; pointer-events: auto;
+    animation: fadeIn 0.3s ease;
+  }
+  .portfolio-menu a {
+    background: rgba(255,255,255,0.4); color: #26333c;
+    font-weight: 500; padding: 0.65rem 1.2rem;
+    border-radius: 40px; text-align: center;
+    text-decoration: none; transition: all 0.2s ease;
+    border: 1px solid transparent;
+  }
+  .portfolio-menu a:hover {
+    background: #2d434b; color: #ffffff; font-weight: 600;
+    box-shadow: 0 0 10px #223034, inset 0 0 5px rgba(255,255,255,0.6);
+    border: 1px solid #48656e;
+  }
+  body.dark .portfolio-menu {
+    background: rgba(20,20,30,0.92); border-color: #2e4952;
+  }
+  body.dark .portfolio-menu a {
+    background: rgba(135,64,64,0.07); color: #d8ecff;
+  }
+  body.dark .portfolio-menu a:hover {
+    background: #4f830f; color: #0f1e2e;
+    border: 1px solid #0e333f;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-8px) translateX(-50%); }
+    to { opacity: 1; transform: translateY(0) translateX(-50%); }
   }
 
-  @keyframes menuSlideUp {
-    from {
-      opacity: 0;
-      transform: translateX(-50%) translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0px);
-    }
-  }
-}
-
-/* === Glassy Block (expertise, work, project, education, skills) === */
-.expertise-block,
-.work-block,
-.project-block,
-.education-block,
-.skill-group {
-  /* glassy backdrop */
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
-  /* border & shape */
-  border: 1px solid rgba(93, 173, 226, 0.3);
-  border-radius: 16px;
-
-  /* spacing & box model */
-  padding: 1.8rem;
-  box-sizing: border-box;
-
-  /* shadow & transition */
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-
-  /* text/color */
-  text-align: center;
-  color: #f0f0f0;
-}
-
-
-/* Hover effect */
-.expertise-block:hover,
-.work-block:hover,
-.project-block:hover,
-.education-block:hover,
-.skill-group:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-  border: 1.5px solid rgba(93, 173, 226, 0.5);
-}
-
-.section {
-  min-height: auto;             /* Don't force tall sections */
-  padding: 4rem 1.5rem 3rem;    /* ⬅️ Reduced vertical spacing */
-  margin-bottom: 2rem;          /* ⬅️ Add if needed to separate cleanly */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease;
-}
-
-    .section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .section h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: #2c373e;
-    }
-
-    #skills h1 {
-  font-size: 3.2rem;
-  color: #117A8B;
-  position: relative;
-}
-#skills h1::after {
-  content: "";
-  width: 80px;
-  height: 4px;
-  background: #3e4f52;
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 10px;
-}
-
-.skills span,
-.projects a {
-  background: #4c616f;
-  color: white;
-  padding: 0.7rem 1.4rem;
-  margin: 0.5rem;
-  border-radius: 25px;
-  display: inline-block;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px 8px rgba(93, 173, 226, 0.4); /* 🔥 Subtle glow */
-  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-
-.skill-group h3 {
-  font-size: 1.5rem;
-  color: #4d5d68;
-  margin-bottom: 1rem;
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 0.5rem;
-}
-
-.skill-group ul {
-  list-style-type: none;
-  padding-left: 0rem;
-}
-
-.skill-group li {
-  margin-bottom: 0.25rem;
-  font-size: 1rem;
-  line-height: 1.25;
-  transition: color 0.3s ease;
-}
-
-.skill-group:hover li {
-  color: #ffffff;
-}
-.skill-group h3 {
-  font-size: 1.2rem;
-  color: #4b5962;
-  margin-bottom: 0.8rem;
-  text-align: center;
-}
-
-.skill-group ul {
-  list-style-type: none;
-  padding-left: 0;
-  text-align: center;
-}
-
-.skill-group li {
-  margin-bottom: 0.4rem;
-  font-size: 0.95rem;
-  font-weight: 500;
-}
-  .contact-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.2rem;
-  margin-top: 1rem;
-}
-@media (max-width: 600px) {
-  .skill-group {
-    max-width: 100%;
-    flex: 1 1 100%;
-  }
-}
-
-.button-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-    .card {
-      background: #ffffff;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      max-width: 700px;
-      margin-bottom: 1rem;
-      color: #2C3E50;
-    }
- 
-  .skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-
-.expertise-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
-  max-width: 1100px;
-  margin-top: 2rem;
-}
-
-.expertise-block {
-  background: rgba(255, 255, 255, 0.06); /* Glassy white with transparency */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 1.8rem;
-  border: 1px solid rgba(93, 173, 226, 0.3);
-  border-radius: 16px;
-  width: calc(33.333% - 2rem);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  box-sizing: border-box;
-  transition: all 0.3s ease;
-  color: #f0f0f0;
-}
-
-.expertise-block:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-  border: 1.5px solid rgba(93, 173, 226, 0.5);
-}
-
-.expertise-block h3 {
-  font-size: 1.25rem;
-  color: #516776;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.expertise-block .line {
-  height: 2px;
-  width: 50px;
-  background: #57656e;
-  margin: 0 auto 1rem;
-  border-radius: 2px;
-}
-
-.expertise-block p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #cfd8dc;
-}
-
-.expertise-block img {
-  width: 50px;
-  margin-bottom: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.expertise-block:hover img {
-  transform: scale(1.1);
-}
-
-
-.work-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  max-width: 1100px;
-  margin-top: 2rem;
-}
-
-
-.work-block h3 {
-  font-size: 1.3rem;
-  color: #475965;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-}
-
-.work-block .line {
-  height: 2px;
-  width: 50px;
-  background: #4a6a7f;
-  margin-bottom: 0.8rem;
-  border-radius: 2px;
-}
-
-.work-block .place {
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: #d0dbe5;
-  margin-bottom: 0.5rem;
-}
-
-.work-block p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #cfd8dc;
-}
-
-
-.skill-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.skill-item img {
-  width: 85px;
-  height: auto;
-  margin-bottom: 0.5rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.skill-item img:hover {
-  transform: scale(1.15);
-  box-shadow: 0 0 12px rgba(26, 82, 118, 0.2);
-  border-radius: 8px;
-}
-
-.wetlab-text {
-  margin-top: 2rem;
-  text-align: center;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #34495e;
-  max-width: 900px;
-  margin-inline: auto;
-}
-
-.supporting-tools-text {
-  margin-top: 2rem;
-  text-align: center;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #34495e;
-  max-width: 900px;
-  margin-inline: auto;
-}
-
-.education-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  max-width: 1100px;
-  margin-top: 2rem;
-}
-
-
-
-.education-block h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #536a79;
-  margin-bottom: 0.5rem;
-}
-
-.education-block .sub {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #cfd8dc;
-  margin-bottom: 0.5rem;
-  
-}
-
-.education-block .line {
-  height: 2px;
-  width: 50px;
-  background: #59656d;
-  margin: 0.8rem 0;
-  border-radius: 2px;
-}
-
-.education-block .courses {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: #cfd8dc;
-}
-
-@media (prefers-color-scheme: light) {
-  .education-block {
-    background: rgba(255, 255, 255, 0.95);
-    color: #2c3e50;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-  }
-
-  .education-block h3 {
-    color: #117A8B;
-  }
-
-  .education-block .sub,
-  .education-block .courses {
-    color: #2c3e50;
-  }
-
-  .education-block .line {
-    background: #117A8B;
-  }
-}
-
-
-
-
-.projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 2rem;
-  max-width: 1100px;
-  width: 100%;
-  margin-top: 2rem;
-  padding: 0 2rem;
-  justify-content: center;
-}
-
-
-
-.project-content {
-  padding-right: 1.5rem;
-}
-
-.project-block h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #1A5276;
-  margin-bottom: 0.5rem;
-}
-
-.project-block p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #333;
-  margin-bottom: 0.5rem;
-}
-
-.project-block .tools {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #117A8B;
-}
-
-.gh-icon {
-  position: absolute;
-  top: 1.2rem;
-  right: 1.2rem;
-  width: 20px;
-  height: 20px;
-  opacity: 0.7;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.project-block:hover .gh-icon {
-  transform: scale(1.2);
-  opacity: 1;
-}
-.project-block h3,
-.project-block p,
-.project-block .tools {
-  text-decoration: none;
-}
-
-
-@media (max-width: 768px) {
-  .projects-container {
-    grid-template-columns: 1fr;
-    padding: 0 1rem;
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .project-block {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 1.2rem 1rem;
+  /* BLOCKS */
+  .expertise-block, .work-block, .project-block,
+  .education-block, .skill-group {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(93,173,226,0.3);
+    border-radius: 16px; padding: 1.8rem;
     box-sizing: border-box;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-align: center; color: #f0f0f0;
+  }
+  .expertise-block:hover, .work-block:hover, .project-block:hover,
+  .education-block:hover, .skill-group:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+    border: 1.5px solid rgba(93,173,226,0.5);
+  }
+  .section {
+    min-height: auto; padding: 4rem 1.5rem 3rem; margin-bottom: 2rem;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    text-align: center; opacity: 0; transform: translateY(50px);
+    transition: all 1s ease;
+  }
+  .section.visible { opacity: 1; transform: translateY(0); }
+  .section h1 { font-size: 3rem; margin-bottom: 1rem; color: #2c373e; }
+
+  /* EXPERTISE */
+  .expertise-container {
+    display: flex; flex-wrap: wrap;
+    justify-content: space-between; gap: 2rem;
+    max-width: 1100px; margin-top: 2rem;
+  }
+  .expertise-block { width: calc(33.333% - 2rem); }
+  .expertise-block h3 {
+    font-size: 1.25rem; color: #516776;
+    margin-bottom: 0.5rem; font-weight: 600;
+  }
+  .expertise-block .line {
+    height: 2px; width: 50px; background: #57656e;
+    margin: 0 auto 1rem; border-radius: 2px;
+  }
+  .expertise-block p {
+    font-size: 0.95rem; line-height: 1.6; color: #cfd8dc;
+  }
+  .expertise-block img {
+    display: block; margin: 0 auto 1rem auto;
+    width: 80px; height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .expertise-block img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(26,82,118,0.3);
   }
 
+  /* WORK */
+  .work-container {
+    display: flex; flex-wrap: wrap;
+    justify-content: center; gap: 2rem;
+    max-width: 1100px; margin-top: 2rem;
+  }
+  .work-block {
+    text-align: left; max-width: 500px; flex: 1 1 400px;
+  }
+  .work-block h3 {
+    font-size: 1.3rem; color: #475965;
+    margin-bottom: 0.5rem; font-weight: 600;
+  }
+  .work-block .line {
+    height: 2px; width: 50px; background: #4a6a7f;
+    margin-bottom: 0.8rem; border-radius: 2px;
+  }
+  .work-block .place {
+    font-weight: 600; font-size: 0.9rem;
+    color: #d0dbe5; margin-bottom: 0.5rem;
+  }
+  .work-block p {
+    font-size: 0.92rem; line-height: 1.65; color: #cfd8dc;
+    margin-bottom: 0.75rem;
+  }
+
+  /* PROJECTS */
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem; max-width: 1100px; width: 100%;
+    margin-top: 2rem; padding: 0 2rem;
+  }
+  .project-block {
+    position: relative; text-align: left;
+    text-decoration: none; display: block; padding: 1.8rem;
+  }
+  .project-content { padding-right: 1.5rem; }
   .project-block h3 {
-    font-size: 1.1rem;
-    text-align: center;
+    font-size: 1.2rem; font-weight: 600;
+    color: #1A5276; margin-bottom: 0.5rem;
   }
-
-  .project-block p,
+  .project-block p {
+    font-size: 0.92rem; line-height: 1.55;
+    color: #cfd8dc; margin-bottom: 0.5rem;
+  }
   .project-block .tools {
-    font-size: 0.9rem;
-    text-align: center;
+    font-size: 0.85rem; font-weight: 500; color: #7ab8d4;
   }
-
   .gh-icon {
-    top: 0.5rem;
-    right: 0.5rem;
-    width: 18px;
-    height: 18px;
+    position: absolute; top: 1.2rem; right: 1.2rem;
+    width: 20px; height: 20px; opacity: 0.7;
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
-}
+  .project-block:hover .gh-icon { transform: scale(1.2); opacity: 1; }
 
+  /* SKILLS */
+  #skills h1 {
+    font-size: 3.2rem; color: #117A8B; position: relative;
+  }
+  #skills h1::after {
+    content: ""; width: 80px; height: 4px;
+    background: #3e4f52; position: absolute;
+    bottom: -10px; left: 50%; transform: translateX(-50%);
+    border-radius: 10px;
+  }
+  .skills-container {
+    display: flex; flex-wrap: wrap;
+    justify-content: center; gap: 2rem; margin-top: 2rem;
+  }
+  .skill-group h3 {
+    font-size: 1.2rem; color: #4b5962;
+    margin-bottom: 0.8rem; text-align: center;
+  }
+  .skill-group ul {
+    list-style-type: none; padding-left: 0; text-align: left;
+  }
+  .skill-group li {
+    margin-bottom: 0.6rem; font-size: 0.9rem;
+    font-weight: 400; transition: color 0.3s ease;
+    line-height: 1.5; padding-left: 0.8rem;
+    border-left: 2px solid rgba(93,173,226,0.2);
+  }
+  .skill-group:hover li { color: #ffffff; }
 
+  /* EDUCATION */
+  .education-container {
+    display: flex; flex-wrap: wrap;
+    justify-content: center; gap: 2rem;
+    max-width: 1100px; margin-top: 2rem;
+  }
+  .education-block h3 {
+    font-size: 1.25rem; font-weight: 600;
+    color: #536a79; margin-bottom: 0.5rem;
+  }
+  .education-block .sub {
+    font-size: 0.95rem; font-weight: 500;
+    color: #cfd8dc; margin-bottom: 0.5rem;
+  }
+  .education-block .line {
+    height: 2px; width: 50px; background: #59656d;
+    margin: 0.8rem 0; border-radius: 2px;
+  }
+  .education-block .courses {
+    margin-top: 0.5rem; font-size: 0.9rem;
+    line-height: 1.8; color: #cfd8dc; text-align: left;
+  }
 
-body.dark {
-  background: #01011a;
-  color: #eaeaea;
-}
+  /* PUBLICATIONS */
+  .pub-container, .cert-container {
+    display: flex; flex-direction: column;
+    align-items: center; width: 100%;
+    max-width: 900px; gap: 1.2rem; margin-top: 2rem;
+  }
+  .pub-block {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(93,173,226,0.3);
+    border-radius: 16px; padding: 1.8rem 2rem;
+    max-width: 800px; width: 100%;
+    box-sizing: border-box; text-align: left;
+    color: #cfd8dc; transition: all 0.3s ease;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  }
+  .pub-block:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+    border: 1.5px solid rgba(93,173,226,0.5);
+  }
+  .pub-block .pub-type {
+    font-size: 0.75rem; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: #5b8fa8; margin-bottom: 0.5rem;
+  }
+  .pub-block p {
+    font-size: 0.95rem; line-height: 1.65; margin: 0;
+  }
+  .cert-block {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(93,173,226,0.3);
+    border-radius: 16px; padding: 1.2rem 2rem;
+    max-width: 500px; width: 100%;
+    box-sizing: border-box; text-align: center;
+    color: #cfd8dc; transition: all 0.3s ease;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  }
+  .cert-block:hover {
+    transform: translateY(-4px);
+    border: 1.5px solid rgba(93,173,226,0.5);
+  }
+  .cert-block .cert-name {
+    font-size: 1rem; font-weight: 600; color: #7bb8cf;
+  }
+  .cert-block .cert-issuer {
+    font-size: 0.85rem; color: #7a9aab; margin-top: 0.3rem;
+  }
 
-body.dark nav {
-  background: rgba(18, 18, 20, 0.95);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
-}
+  /* DARK MODE */
+  body.dark { background: #01011a; color: #eaeaea; }
+  body.dark nav {
+    background: rgba(18,18,20,0.95);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  }
+  body.dark .project-block h3,
+  body.dark .skill-group h3 {
+    color: #546572; text-shadow: 0 0 3px rgba(0,0,0,0.4);
+  }
+  body.dark .project-block p { color: #dddddd; }
+  body.dark .tools { color: #aad3ff; }
+  body.dark .project-block:hover { background-color: #2b2c32; }
+  body.dark .gh-icon { filter: brightness(0) invert(1); }
 
+  .typed-text {
+    font-size: 1.3rem; color: #7697ac;
+    margin-top: 0; margin-bottom: 0;
+    font-weight: 600; display: block;
+  }
 
-body.dark .project-block h3,
-body.dark .skill-group h3 {
-  color: #546572;
-  text-shadow: 0 0 3px rgba(0,0,0,0.4);
-}
+  .nav-logo {
+    position: absolute; top: 36%; left: -5rem;
+    transform: translateY(-50%); width: 81px; height: 81px;
+    object-fit: contain; z-index: 1001; opacity: 0.55;
+  }
 
-body.dark .project-block p {
-  color: #dddddd;
-}
+  .scroll-to-top {
+    position: fixed; bottom: 2rem; right: 2rem;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: rgba(93,173,226,0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(93,173,226,0.4);
+    display: none; align-items: center; justify-content: center;
+    cursor: pointer; z-index: 999; transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  .scroll-to-top:hover {
+    background: rgba(93,173,226,0.5); transform: translateY(-3px);
+  }
 
-body.dark .tools {
-  color: #aad3ff;
-}
-
-body.dark .project-block:hover {
-  background-color: #2b2c32;
-}
-
-body.dark .gh-icon {
-  filter: brightness(0) invert(1);
-}
-.expertise-block img {
-  width: 75px;
-  height: auto;
-  margin-bottom: 0.5rem;
-}
-.expertise-block img {
-  display: block;
-  margin: 0 auto 1rem auto; /* centers and adds space below */
-  width: 80px;
-  height: auto;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.expertise-block img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(26, 82, 118, 0.3);
-}
-
-.supporting-tools-text,
-.wetlab-text {
-  margin-top: 2rem;
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #1A5276;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  max-width: 900px;
-  margin-inline: auto;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-}
-
-body.dark .supporting-tools-text,
-body.dark .wetlab-text {
-  background: rgba(30, 30, 30, 0.6);
-  color: #988c8c;
-}
-.typed-text {
-  font-size: 1.3rem;
-  color: #7697ac;
-  margin-top: 0rem;
-  margin-bottom: 0rem;
-  font-weight: 600;
-  display: block;
-}
-
-@media (max-width: 768px) {
-    .expertise-block,
-    .work-block,
-    .education-block,
-    .skill-group,
-    .project-block {
-      width: 100% !important;
-      max-width: 100% !important;
+  @media (max-width: 768px) {
+    nav {
+      bottom: 1rem; top: auto; left: 50%;
+      transform: translateX(-50%); padding: 0.4rem 1rem;
+      border-radius: 1rem; width: calc(100% - 2rem);
+      max-width: max-content;
+    }
+    .nav-links {
+      display: flex; gap: 0.25rem; flex-wrap: nowrap;
+      justify-content: center; overflow-x: auto; scrollbar-width: none;
+    }
+    .nav-links a {
+      padding: 0.35rem 0.75rem; font-size: 0.7rem;
+      white-space: nowrap;
+    }
+    .expertise-block { width: 100% !important; }
+    .projects-container { grid-template-columns: 1fr !important; padding: 0 1rem; }
+    .expertise-block, .work-block, .education-block,
+    .skill-group, .project-block {
+      width: 100% !important; max-width: 100% !important;
       padding: 1.2rem !important;
     }
-
-    .projects-container {
-      grid-template-columns: 1fr !important;
+    .section h1 { font-size: 2.2rem; }
+    .section { padding: 4rem 1rem; }
+    .hero h1 { font-size: 2.5rem; }
+    .hero p { font-size: 1rem; }
+    .btn-icon { padding: 0.6rem 1rem; }
+    .portfolio-dropdown { width: 100%; display: flex; justify-content: center; }
+    #portfolio-toggle { width: 100%; max-width: 220px; }
+    .portfolio-menu {
+      top: auto; bottom: calc(100% + 12px);
+      transform: translateX(-50%); width: 90vw; max-width: 300px;
+      font-size: 0.9rem; background: rgba(20,20,30,0.95);
     }
-
-    .education-block h3,
-    .work-block h3,
-    .project-block h3,
-    .skill-group h3 {
-      font-size: 1.1rem !important;
-      text-align: center;
-    }
-
-    .section h1 {
-      font-size: 2.2rem;
-    }
-
-    .section {
-      padding: 4rem 1rem;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-    }
-
-    .hero p {
-      font-size: 1rem;
-    }
-
-    .btn-icon {
-      padding: 0.6rem 1rem;
+    .portfolio-menu.show { animation: menuSlideUp 0.25s ease; }
+    @keyframes menuSlideUp {
+      from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+      to { opacity: 1; transform: translateX(-50%) translateY(0); }
     }
   }
-  /* === APPLY GLASSY STYLE TO ALL KEY BLOCKS === */
-
-
-
-
 </style>
-<!-- Google Analytics (GA4) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EK911H0RT5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-EK911H0RT5');
+  gtag('js', new Date()); gtag('config', 'G-EK911H0RT5');
 </script>
-
 </head>
-
-
-
-<script>
-  const scrollBtn = document.querySelector('.scroll-to-top');
-  window.addEventListener('scroll', () => {
-    scrollBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
-  });
-
-  scrollBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-</script>
 
 <body class="dark">
 <div id="tsparticles"></div>
+
 <nav>
   <a href="#about">
     <img src="icons/logo.png" alt="Logo" class="nav-logo" />
   </a>
-
   <div class="nav-container">
     <div class="nav-links">
       <a href="#about">About Me</a>
@@ -1105,6 +503,7 @@ body.dark .wetlab-text {
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
           <a href="#education">Education</a>
+          <a href="#publications">Publications</a>
         </div>
       </div>
       <a href="assets/god.pdf" target="_blank">Resume</a>
@@ -1112,243 +511,305 @@ body.dark .wetlab-text {
   </div>
 </nav>
 
-
+<!-- HERO -->
 <section class="hero" id="about">
-    <img src="icons/profile.png" alt="Santoshi Borra">
-    <h1>Santoshi Borra</h1>
-    <span id="typed" class="typed-text"></span>
-    <p></p>
-    <blockquote>""</blockquote>
-    <div class="contact-buttons">
-      <div class="button-row">
-        <a href="mailto:bsantoshi.d@gmail.com" class="btn-icon">
-          <img src="icons/email.png" alt="Email Icon" /> Email
-        </a>
-        <a href="https://linkedin.com/in/santoshi-bvs" target="_blank" class="btn-icon">
-          <img src="icons/linkedin.png" alt="LinkedIn Icon" /> LinkedIn
-        </a>
-        <a href="https://github.com/vborra09" target="_blank" class="btn-icon">
-          <img src="icons/github.png" alt="GitHub Icon" /> GitHub
-        </a>
-      </div>
-      <div class="button-row">
-        <a class="btn-icon" href="assets/Bioinformatics Industrial Resume.pdf" download>
-          <img src="icons/resume.png" alt="Resume Icon" /> Download Resume
-        </a>
-      </div>
+  <img src="icons/profile.png" alt="Santoshi Borra">
+  <h1>Santoshi Borra</h1>
+  <span id="typed" class="typed-text"></span>
+  <p></p>
+  <div class="contact-buttons">
+    <div class="button-row">
+      <a href="mailto:santoshiborra09@gmail.com" class="btn-icon">
+        <img src="icons/email.png" alt="Email Icon" /> Email
+      </a>
+      <a href="https://linkedin.com/in/santoshi-bvs" target="_blank" class="btn-icon">
+        <img src="icons/linkedin.png" alt="LinkedIn Icon" /> LinkedIn
+      </a>
+      <a href="https://github.com/vborra09" target="_blank" class="btn-icon">
+        <img src="icons/github.png" alt="GitHub Icon" /> GitHub
+      </a>
     </div>
-  </section>
+    <div class="button-row">
+      <a class="btn-icon" href="assets/Bioinformatics Industrial Resume.pdf" download>
+        <img src="icons/resume.png" alt="Resume Icon" /> Download Resume
+      </a>
+    </div>
+  </div>
+</section>
 
 <div id="main">
+
+<!-- EXPERTISE -->
 <section class="section" id="expertise">
   <h1>Areas of Expertise</h1>
   <div class="expertise-container">
 
     <div class="expertise-block">
       <img src="icons/NGS.png" alt="NGS Icon"/>
-      <h3></h3>
+      <h3>Single-Cell and Spatial Transcriptomics</h3>
       <div class="line"></div>
-      <p> </p>
+      <p>Profiling immune and tumor cell populations at single-cell resolution, mapping cell states, inferring differentiation trajectories, and placing transcriptional programs in spatial tissue context. Most of this work has gone directly into clinical findings.</p>
     </div>
-    
+
     <div class="expertise-block">
       <img src="icons/G.png" alt="Genomics Icon"/>
-      <h3></h3>
+      <h3>Multi-Omics Integration</h3>
       <div class="line"></div>
-      <p></p>
+      <p>Combining transcriptomic, epigenomic, spatial, and proteomic data to get a complete picture of a biological system. The work spans cancer biology, immunology, and neurodegeneration — picking the right data types for the question, not just running everything available.</p>
     </div>
-    
+
     <div class="expertise-block">
       <img src="icons/DS.png" alt="Data Science Icon"/>
-      <h3>Bioinformatics and Statistical Data Analysis</h3>
+      <h3>Translational Bioinformatics</h3>
       <div class="line"></div>
-      <p>Apply rigorous statistical methods and bioinformatics tools to generate accurate, reproducible insights from complex omics datasets.</p>
+      <p>Computational work that produces something a clinician or experimentalist can act on — a survival biomarker, a genotyping call, a target worth validating. This means staying in the loop with wet-lab and clinical collaborators from the start, not just handing off results.</p>
     </div>
-    
+
     <div class="expertise-block">
       <img src="icons/ML.png" alt="Machine Learning Icon"/>
-      <h3></h3>
+      <h3>Machine Learning in Genomics</h3>
       <div class="line"></div>
-      <p></p>
+      <p>Applying deep learning and statistical models where they genuinely help — learning cell state structure from high-dimensional omics data, predicting patient outcomes from gene expression, and modeling regulatory dynamics over time. Focused on biological interpretability, not just model performance.</p>
     </div>
-    
+
     <div class="expertise-block">
-      <img src="icons/chromosome.png" alt="GWAS-TWAS Icon"/>
-      <h3></h3>
+      <img src="icons/chromosome.png" alt="Network Modeling Icon"/>
+      <h3>Genome-Scale Metabolic Modeling</h3>
       <div class="line"></div>
-      <p></p>
+      <p>Simulating how an organism's metabolism responds to genetic changes, identifying which knockouts or overexpressions actually move the needle on yield, and feeding those predictions back into strain engineering. The goal is cutting down the number of experiments needed, not replacing them.</p>
     </div>
-    
+
     <div class="expertise-block">
-      <img src="icons/pipeline.png" alt="Pipeline Automation Icon"/>
-      <h3></h3>
+      <img src="icons/pipeline.png" alt="Pipeline Icon"/>
+      <h3>Pipeline Engineering and HPC</h3>
       <div class="line"></div>
-      <p></p>
+      <p>Building workflows that are containerized, version-controlled, and behave identically across local and cluster environments. Analysis at scale — thousands of samples, millions of cells — run on SLURM and AWS without breaking down or producing unreproducible results.</p>
     </div>
-  
-  </div>
+
   </div>
 </section>
 
+<!-- WORK EXPERIENCE -->
 <section class="section" id="work">
   <h1>Work Experience</h1>
   <div class="work-container">
 
     <div class="work-block">
-      <h3>Ourobio – Bioinformatician</h3>
+      <h3>Bioinformatician, Translational Research</h3>
       <div class="line"></div>
-      <p class="place">Jun 2025 – Present</p>
-      <p>Investigated catabolite repression mechanisms and transcriptional regulators (CRP, LacI) limiting mixed carbon source
-utilization (glucose, lactose)</p>
-      <p>Simulated gene knockouts overexpression strategies to alleviate carbon catabolite repression, enabling simultaneous substrate fermentation.</p>
-      <p>Predicted optimized regulatory genetic architectures to enhance product yields from waste feedstocks. Validated model predictions against experimental data and proposed actionable genetic modifications for wet-lab strain improvement.</p>
+      <p class="place">Singapore General Hospital – SingHealth &nbsp;|&nbsp; Dec 2025 – Present</p>
+      <p>Working on two parallel projects here. The first is characterizing how tumors undergo epithelial-to-mesenchymal transition in triple-negative breast cancer — using spatial transcriptomics alongside IHC and patient-derived xenograft data to understand where and why that happens in tissue, and what combination therapies can reverse it. The second is a genotyping pipeline for Alzheimer's risk stratification: automating APOE classification from qPCR data using probabilistic modeling, replacing a largely manual process that was error-prone across batches.</p>
     </div>
 
     <div class="work-block">
-      <h3>Researcher Assistant – Indiana University Bloomington</h3>
+      <h3>Bioinformatician</h3>
       <div class="line"></div>
-      <p class="place">May 2024 – May 2025</p>
-      <p>Investigated NK cell heterogeneity and transcriptional regulation in chronic myeloid leukemia using multi-omics approaches. Designed and executed an end-to-end scRNA-seq pipeline to analyze more than 300,000 immune cells from CML patient samples.</p>
-      <p>Reconstructed context-specific gene regulatory networks using GENIE3's ensemble ML framework to identify master transcriptional regulators driving relapse pathogenesis.</p>
-      <p>Validated targets through TCR-seq clonotype expansion mapping linking cytotoxic dysfunction to NK cell exhaustion; proposed an IL-15–mediated reprogramming model with therapeutic implications.</p>
+      <p class="place">Ourobio &nbsp;|&nbsp; Jun – Nov 2025</p>
+      <p>Built the computational side of a microbial strain engineering workflow — genome-scale metabolic models that simulate how a microbe behaves under different genetic conditions, so the wet-lab team could prioritize which edits to actually try. Ran large libraries of knockout and overexpression scenarios on HPC to surface the handful of targets worth taking to the bench. Two of those predictions in PHA and indigo biosynthesis are now in experimental validation.</p>
+    </div>
+
+    <div class="work-block">
+      <h3>Research Assistant</h3>
+      <div class="line"></div>
+      <p class="place">Indiana University Bloomington &nbsp;|&nbsp; May 2024 – May 2025</p>
+      <p>This became a first-author paper. The work was understanding why some CML patients stay in remission after stopping treatment while others relapse — specifically looking at NK cell biology. I built GAFA, a pipeline that combined a variational autoencoder, generalized additive modeling, and patient-level random forests to analyze over 300,000 NK cells from 15 patient samples. It resolved six distinct NK cell states, identified which gene regulatory networks were active in each, and produced an 18-gene panel that predicts outcome at single-cell resolution with AUC 0.89.</p>
     </div>
 
   </div>
 </section>
 
+<!-- PROJECTS -->
 <section class="section" id="projects">
   <h1>Projects</h1>
   <div class="projects-container">
 
-    <a class="project-block" href="" target="_blank">
+    <a class="project-block" href="https://github.com/vborra09" target="_blank">
       <div class="project-content">
-        <h3></h3>
-        <p></p>
-        <div class="tools">Python · Biopython · Pandas</div>
+        <h3>GAFA — NK Cell Analysis in CML</h3>
+        <p>A pipeline I built and published as first author. The question was why some leukemia patients maintain remission after stopping therapy and others don't. I processed 300K+ NK cells from 15 patient samples, combined deep generative modeling with interpretable statistical models, and mapped six functional NK cell states to patient outcomes. The result is an 18-gene signature that predicts relapse at single-cell resolution.</p>
+        <div class="tools">Python · scVI · PyTorch · R · GENIE3 · Seurat</div>
       </div>
       <img class="gh-icon" src="https://img.icons8.com/ios-glyphs/24/1A5276/github.png" alt="GitHub">
     </a>
 
-</section>
+    <a class="project-block" href="https://github.com/vborra09" target="_blank">
+      <div class="project-content">
+        <h3>EMT Mapping in Triple-Negative Breast Cancer</h3>
+        <p>Used NanoString CosMx spatial transcriptomics alongside IHC and PDX tumor data to characterize where and how tumors acquire mesenchymal identity. Found that VIM and CDH1 form a key regulatory axis driving that transition, identified CD44 as a spatial survival marker, and showed that combining LSD1 inhibition with checkpoint blockade substantially reduces the EMT-high tumor population.</p>
+        <div class="tools">NanoString CosMx · Python · R · IHC · PDX</div>
+      </div>
+      <img class="gh-icon" src="https://img.icons8.com/ios-glyphs/24/1A5276/github.png" alt="GitHub">
+    </a>
 
-<section class="section" id="skills">
-  <h1 class="text-3xl font-bold text-center mb-8">Skills</h1>
+    <a class="project-block" href="https://github.com/vborra09" target="_blank">
+      <div class="project-content">
+        <h3>Kinase–Phosphatase Dynamics in Yeast Respiration</h3>
+        <p>Modeled how kinase-phosphatase signaling evolves during the yeast metabolic cycle using a temporal graph approach. Instead of treating the protein interaction network as static, I integrated time-series expression data to make the network dynamic, then used continuous-time Markov processes for link prediction. The model hit 100% Hits@20, a 30%+ improvement over static baselines.</p>
+        <div class="tools">Python · PyTorch Geometric · NetworkX · CTMP</div>
+      </div>
+      <img class="gh-icon" src="https://img.icons8.com/ios-glyphs/24/1A5276/github.png" alt="GitHub">
+    </a>
 
-  
+    <a class="project-block" href="https://github.com/vborra09" target="_blank">
+      <div class="project-content">
+        <h3>STAT6 Inhibitor Discovery for Rheumatoid Arthritis</h3>
+        <p>Built a computational drug screening pipeline to find selective STAT6 inhibitors. Screened over a million compounds using structure-based docking, filtered candidates with free-energy perturbation calculations, and validated stability through microsecond molecular dynamics. Identified three chemotypes with predicted binding affinity under 120 nM.</p>
+        <div class="tools">Schrödinger · FEP+ · Python · Molecular Dynamics</div>
+      </div>
+      <img class="gh-icon" src="https://img.icons8.com/ios-glyphs/24/1A5276/github.png" alt="GitHub">
+    </a>
 
-  <!-- Part 2: Remaining Skills in Categorized Text Grid -->
-  <div class="skills-container">
-    <div class="skill-group">
-      <h3>Bioinformatics Tools</h3>
-      <ul>
-        <li>FeatureCounts</li>
-        <li>GSEA</li>
-        <li>MetaXcan</li>
-        <li>PLINK</li>
-        <li>Trimmomatic</li>
-      </ul>
-    </div>
-    <div class="skill-group">
-      <h3>Programming</h3>
-      <ul>
-        <li>Python</li>
-        <li>R</li>
-        <li>Bash / Shell</li>
-        <li>SQL</li>
-        <li>PySpark</li>
-      </ul>
-    </div>
-    <div class="skill-group">
-      <h3>Workflow & Infra</h3>
-      <ul>
-        <li>Snakemake</li>
-        <li>Nextflow</li>
-        <li>Git</li>
-        <li>Docker</li>
-        <li>AWS</li>
-      </ul>
-    </div>
-    <div class="skill-group">
-      <h3>Databases</h3>
-      <ul>
-        <li>NCBI</li>
-        <li>GEO</li>
-        <li>Ensembl</li>
-        <li>UCSC Genome Browser</li>
-        <li>KEGG</li>
-      </ul>
-    </div>
-    <div class="skill-group">
-      <h3>Wet Lab Skills</h3>
-      <ul>
-        <li>DNA/RNA Extraction</li>
-        <li>qPCR</li>
-        <li>Western Blotting</li>
-        <li>Gel Electrophoresis</li>
-        <li>MIC Assay</li>
-        <li>ELISA</li>
-        <li>Antibacterial Testing</li>
-        <li>Protein Docking</li>
-      </ul>
-    </div>
-    <div class="skill-group">
-      <h3>Soft Skills</h3>
-      <ul>
-        <li>Scientific Communication</li>
-        <li>Problem Solving</li>
-        <li>Reproducibility Practices</li>
-        <li>Time Management</li>
-        <li>Attention to Detail</li>
-        <li>Team Collaboration</li>
-      </ul>
-    </div>
+    <a class="project-block" href="https://github.com/vborra09" target="_blank">
+      <div class="project-content">
+        <h3>De Novo Genome Assembly — Beetle and Nematode Species</h3>
+        <p>Assembled two non-model organism genomes from scratch using long-read PacBio HiFi sequencing and Hi-C chromatin contact data for scaffolding. Achieved near-chromosome-level assemblies with 95% BUSCO completeness, then annotated genes and ran comparative synteny analysis to place these species in broader evolutionary context.</p>
+        <div class="tools">Nextflow · PacBio HiFi · Hi-C · BUSCO</div>
+      </div>
+      <img class="gh-icon" src="https://img.icons8.com/ios-glyphs/24/1A5276/github.png" alt="GitHub">
+    </a>
+
+    <a class="project-block" href="https://github.com/vborra09" target="_blank">
+      <div class="project-content">
+        <h3>APOE Genotyping Pipeline for Alzheimer's Risk</h3>
+        <p>Automated a genotyping workflow that was previously done manually by clinicians reviewing qPCR curves. Used Gaussian mixture models to classify APOE alleles probabilistically, handling batch variation and ambiguous calls that tripped up rule-based approaches. Matched expert accuracy above 99% while cutting review time by 70%.</p>
+        <div class="tools">Python · Scikit-learn · GMM · Pandas</div>
+      </div>
+      <img class="gh-icon" src="https://img.icons8.com/ios-glyphs/24/1A5276/github.png" alt="GitHub">
+    </a>
+
   </div>
 </section>
 
+<!-- SKILLS -->
+<section class="section" id="skills">
+  <h1>Skills</h1>
+  <div class="skills-container">
 
+    <div class="skill-group">
+      <h3>Omics Analysis</h3>
+      <ul>
+        <li>Single-cell RNA-seq — clustering, trajectory inference, GRN reconstruction</li>
+        <li>Spatial transcriptomics — NanoString CosMx, cell-type deconvolution, niche analysis</li>
+        <li>Chromatin accessibility — ATAC-seq, ChIP-seq, peak-to-gene linking</li>
+        <li>Genome assembly — PacBio HiFi, Hi-C scaffolding, BUSCO validation</li>
+        <li>Variant calling — population genetics, GWAS/TWAS, allele-specific expression</li>
+        <li>Bulk RNA-seq — differential expression, pathway enrichment, GSEA</li>
+      </ul>
+    </div>
+
+    <div class="skill-group">
+      <h3>Computational Modeling</h3>
+      <ul>
+        <li>Genome-scale metabolic modeling — flux balance analysis, knockout/overexpression simulation</li>
+        <li>Gene regulatory network inference — ensemble methods, patient-stratified GRNs</li>
+        <li>Temporal graph modeling — dynamic PPI networks, link prediction</li>
+        <li>Molecular docking and free-energy perturbation — virtual screening at scale</li>
+        <li>Probabilistic classification — Gaussian mixture models, Bayesian approaches</li>
+      </ul>
+    </div>
+
+    <div class="skill-group">
+      <h3>Machine Learning</h3>
+      <ul>
+        <li>Deep learning — variational autoencoders, graph neural networks, CNNs</li>
+        <li>Supervised learning — random forests, gradient boosting, SVM, model interpretation</li>
+        <li>Unsupervised learning — dimensionality reduction, clustering, latent space analysis</li>
+        <li>LLM fine-tuning — domain adaptation for biological text and sequence data</li>
+        <li>Frameworks — PyTorch, TensorFlow, Scikit-learn, PyTorch Geometric</li>
+      </ul>
+    </div>
+
+    <div class="skill-group">
+      <h3>Engineering and Infrastructure</h3>
+      <ul>
+        <li>Languages — Python, R, Bash, SQL, PySpark</li>
+        <li>Workflow management — Nextflow, Snakemake, reproducible pipeline design</li>
+        <li>HPC — SLURM job scheduling, large-scale parallelization</li>
+        <li>Cloud — AWS EC2, S3, SageMaker</li>
+        <li>Containerization — Docker, environment reproducibility</li>
+        <li>Visualization — R Shiny, ggplot2, matplotlib, seaborn</li>
+      </ul>
+    </div>
+
+    <div class="skill-group">
+      <h3>Wet Lab</h3>
+      <ul>
+        <li>DNA / RNA extraction and QC</li>
+        <li>qPCR — genotyping, expression quantification</li>
+        <li>Western blotting, ELISA, gel electrophoresis</li>
+        <li>MIC assays and antibacterial testing</li>
+        <li>Protein docking and structural analysis</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- EDUCATION -->
 <section class="section" id="education">
   <h1>Education</h1>
   <div class="education-container">
 
     <div class="education-block">
-      <h3>Masters in Bioinformatics</h3>
+      <h3>M.S. Bioinformatics in Computer Science</h3>
       <div class="sub">Indiana University Bloomington — May 2025</div>
-      
       <div class="line"></div>
       <div class="courses">
         <strong>Relevant Coursework:</strong><br>
-        • Machine Learning in Bioinformatics<br>
-        • Data Science in RAMP<br>
-        • SNP discovery in Population Genetics<br>
-        • Algorithms and Data Structures<br>
-        • Data Mining<br>
-        • Computational Modelling of Virtual Tissues<br>
-        • Data visualization<br>
-        • Computer Vision<br>
+        Machine Learning in Bioinformatics<br>
+        Data Science in RAMP<br>
+        SNP Discovery in Population Genetics<br>
+        Algorithms and Data Structures<br>
+        Data Mining<br>
+        Computational Modelling of Virtual Tissues<br>
+        Data Visualization<br>
+        Computer Vision
       </div>
-    
     </div>
 
     <div class="education-block">
-      <h3>BTech in Biotechnology - Genetics</h3>
-      <div class="sub">Sri Ramaswamy Memorial University (SRM) — May 2023</div>
-      
+      <h3>B.Tech Biotechnology — Genetics</h3>
+      <div class="sub">SRM University — May 2023</div>
       <div class="line"></div>
       <div class="courses">
         <strong>Relevant Coursework:</strong><br>
-        • Microbiology<br>
-        • Gene manipulation and editing <br>
-        • Immunology<br>
-        • Molecular Diagnostics<br>
-        • Bioprocessing<br>
-        • Molecular Biology<br>
-        • Biochemistry<br>
-        • Animal Biotechnology<br>
-        
+        Microbiology<br>
+        Gene Manipulation and Editing<br>
+        Immunology<br>
+        Molecular Diagnostics<br>
+        Bioprocessing<br>
+        Molecular Biology<br>
+        Biochemistry<br>
+        Animal Biotechnology
       </div>
     </div>
+
   </div>
 </section>
+
+<!-- PUBLICATIONS AND CERTIFICATIONS -->
+<section class="section" id="publications">
+  <h1>Publications and Certifications</h1>
+  <div class="pub-container">
+
+    <div class="pub-block">
+      <div class="pub-type">Publication — Under Review</div>
+      <p>Borra S, Yan D, Welner RS, Yue Z. An AI-enabled single-cell transcriptomic analysis pipeline for gene signature discovery in natural killer cells linked to remission outcomes in chronic myeloid leukemia. 2025.</p>
+    </div>
+
+    <div class="pub-block">
+      <div class="pub-type">Conference Poster — AACR Annual Meeting</div>
+      <p>Single-cell profiling of NK cells in CML identifies distinct cell states with gene regulatory signatures associated with differential outcomes after imatinib discontinuation.</p>
+    </div>
+
+    <div class="cert-block">
+      <div class="cert-name">AWS Certified AI Practitioner (AIF-C01)</div>
+      <div class="cert-issuer">Amazon Web Services</div>
+    </div>
+
+  </div>
+</section>
+
 </div>
 
 <a href="#" class="scroll-to-top" aria-label="Scroll to top">
@@ -1358,44 +819,38 @@ utilization (glucose, lactose)</p>
   </svg>
 </a>
 
+<script>
+  const scrollBtn = document.querySelector('.scroll-to-top');
+  window.addEventListener('scroll', () => {
+    scrollBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+  });
+  scrollBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
 
 <script>
-
 tsParticles.load("tsparticles", {
   background: { color: { value: "transparent" } },
   fpsLimit: 60,
   interactivity: {
-    events: {
-      onHover: { enable: true, mode: "repulse" },
-      resize: true
-    },
-    modes: {
-      repulse: { distance: 60, duration: 0.3 }
-    }
+    events: { onHover: { enable: true, mode: "repulse" }, resize: true },
+    modes: { repulse: { distance: 60, duration: 0.3 } }
   },
   particles: {
-    number: {
-      density: { enable: true, area: 1200 },
-      value: 35
-    },
+    number: { density: { enable: true, area: 1200 }, value: 35 },
     color: { value: "#AB8D46" },
     shape: { type: "square" },
     opacity: { value: 0.35 },
     size: { value: { min: 1, max: 8 } },
     move: {
-      enable: true,
-      speed: 0.75,
-      direction: "none",
-      random: true,
-      straight: false,
-      outModes: { default: "bounce" }
+      enable: true, speed: 0.75, direction: "none",
+      random: true, straight: false, outModes: { default: "bounce" }
     },
     links: {
-      enable: true,
-      color: "#5C5034",
-      distance: 150,
-      opacity: 0.45,
-      width: 0.8
+      enable: true, color: "#5C5034",
+      distance: 150, opacity: 0.45, width: 0.8
     },
     collisions: { enable: false }
   },
@@ -1404,76 +859,57 @@ tsParticles.load("tsparticles", {
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
+    if (entry.isIntersecting) entry.target.classList.add('visible');
   });
 });
-
-document.querySelectorAll('.section').forEach(section => {
-  observer.observe(section);
-});
+document.querySelectorAll('.section').forEach(s => observer.observe(s));
 
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('nav a');
-
 window.addEventListener('scroll', () => {
   let current = '';
-
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100;
-    const sectionHeight = section.clientHeight;
-    if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+    const top = section.offsetTop - 100;
+    if (pageYOffset >= top && pageYOffset < top + section.clientHeight) {
       current = section.getAttribute('id');
     }
   });
-
   navLinks.forEach(link => {
     link.classList.remove('active');
-    if (link.getAttribute('href') === `#${current}`) {
-      link.classList.add('active');
-    }
+    if (link.getAttribute('href') === '#' + current) link.classList.add('active');
   });
 });
-
 </script>
+
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     new Typed("#typed", {
-  strings: [
-  "Building robust NGS pipelines",
-  "Making sense of complex RNA-Seq data",
-  "Connecting genes to traits with TWAS & GWAS",
-  "Automating workflows for reproducible research",
-  "Writing clean code in Python and R",
-  "Integrating multi-omics to see the full picture",
-  "Translating data into biological insight",
-  "Bridging computation and discovery"
-  ],
-  typeSpeed: 40,
-  backSpeed: 30,
-  backDelay: 2000,
-  loop: true,
-  smartBackspace: true,
-  showCursor: false 
-});
-
+      strings: [
+        "Building robust NGS pipelines",
+        "Resolving single-cell heterogeneity",
+        "Integrating spatial transcriptomics and IHC",
+        "Modeling metabolic networks at genome scale",
+        "Connecting genes to outcomes with multi-omics",
+        "Automating workflows for reproducible research",
+        "Writing clean code in Python and R",
+        "Translating data into biological insight"
+      ],
+      typeSpeed: 40, backSpeed: 30, backDelay: 2000,
+      loop: true, smartBackspace: true, showCursor: false
+    });
   });
 </script>
+
 <script>
   const toggleButton = document.getElementById('portfolio-toggle');
   const dropdownMenu = document.querySelector('.portfolio-menu');
-
   toggleButton.addEventListener('click', () => {
     dropdownMenu.classList.toggle('show');
-    document.body.classList.toggle('menu-active', dropdownMenu.classList.contains('show'));
   });
-
   window.addEventListener('click', (e) => {
     if (!document.querySelector('.portfolio-dropdown').contains(e.target)) {
       dropdownMenu.classList.remove('show');
-      document.body.classList.remove('menu-active');
     }
   });
 </script>
